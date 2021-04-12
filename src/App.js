@@ -1,24 +1,38 @@
-import logo from './logo.png';
 import './App.css';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Homepage from './header/Homepage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom';
+import Login from './log_in/Login';
+import Backvideo from './Backvideo';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Fffff
-        </p>
-      </header>
-      <p>
-        rrrrsdrsa
-      </p>
-      <Button>
-        Hello
-      </Button>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Homepage/>
+            <Backvideo/>
+          </Route>
+
+              <Route path="/login">
+            <Login/>
+          
+          </Route>
+
+          <Route path="*">
+<Redirect to="/home" push={true}/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
+      
   );
 }
 
