@@ -27,3 +27,10 @@ span.colortext2
 {
     width: 35%;
 }
+
+#nav
+{
+    position:fixed;
+    z-index: 1;
+    width:100%;
+}

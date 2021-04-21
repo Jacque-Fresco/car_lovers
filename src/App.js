@@ -9,7 +9,10 @@ import {
 } from 'react-router-dom';
 import Login from './log_in/Login';
 import Backvideo from './backvideo/Backvideo';
-import Register from './register/Register'
+import Register from './register/Register';
+import CarsContainer from './cars/CarsContainer';
+import Fera from './fera/Fera';
+import Bmw from './bmw/Bmw';
 
 const App = () => {
   return (
@@ -20,6 +23,7 @@ const App = () => {
           <Route path="/home">
             <Homepage />
             <Backvideo />
+            <CarsContainer />
           </Route>
 
           <Route path="/login">
@@ -30,12 +34,22 @@ const App = () => {
             <Register />
           </Route>
 
+          <Route path="/bmw">
+            <Bmw />
+          </Route>
+
+          <Route path="/ferrari">
+            <Fera />
+          </Route>
+
           <Route path="*">
             <Redirect to="/home" push={true} />
           </Route>
 
         </Switch>
       </Router>
+
+
     </div>
 
   );

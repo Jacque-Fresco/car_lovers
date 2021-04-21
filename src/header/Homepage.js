@@ -9,7 +9,7 @@ import './Homepage.css';
 const Homepage = () => {
   return (
     <div>
-      <Navbar bg="dark" expand="lg">
+      <Navbar bg="dark" expand="lg" id="nav">
         <Navbar.Brand href="/home">
           <img
             src="https://i.ibb.co/S3Fyccr/logo.png"
